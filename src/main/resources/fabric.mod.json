@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "speedrun-f3",
+  "version": "${version}",
+  "name": "Speedrun-F3",
+  "description": "A minimalist and completely free F3 screen custom-designed for speedrunners. It hides unnecessary clutter and highlights critical data like Entity (E) count, precise angles, and coordinates.",
+  "authors": ["Tamo55"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/speedrun-f3/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.tamo55.speedrunF3.client.SpeedrunF3DataGenerator"
+    ],
+    "client": [
+      "com.tamo55.speedrunF3.client.SpeedrunF3Client"
+    ],
+    "main": [
+      "com.tamo55.speedrunF3.SpeedrunF3"
+    ]
+  },
+  "mixins": [
+    "speedrun-f3.mixins.json",
+    {
+      "config": "speedrun-f3.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
